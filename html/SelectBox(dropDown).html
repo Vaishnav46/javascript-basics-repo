@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>
+            dropdown box in js
+        </title>
+    </head>
+    <script>
+        function displaySelected(){
+            var s1 = document.getElementById("select1");
+            //alert("value selected is "+s1.value);
+            alert(s1.options[s1.selectedIndex].value)
+        
+        }
+    </script>
+    <body>
+        <select id="select1">
+            <option value ="Java">Java</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Python">Python</option>
+
+        </select>
+<br><br>
+        <button onclick="displaySelected()">Submit</button>
+    </body>
+</html>

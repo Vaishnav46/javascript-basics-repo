@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>
+            zoom in and zoom out in js
+        </title>
+    </head>
+    <script>
+        var id =0;
+        var width =250;
+        var diff =2;
+       // document.getElementById("img1").style.width = width;
+
+        function zoomIn(){
+            if(width <350){
+                width = width + diff;
+                document.getElementById("img1").style.width =width;
+            }else{
+                clearInterval(id);
+            }
+        }
+        function zoomOut(){
+            if(width>250){
+                width = width -diff;
+                document.getElementById("img1").style.width =width;
+            }else{
+                clearInterval(id);
+            }
+            
+
+        }
+
+        function increase(){
+            clearInterval(id);
+            id = setInterval(zoomIn,5);
+        }
+        function decrease(){
+            clearInterval(id);
+            id = setInterval(zoomOut,5);
+        }
+
+
+    </script>
+    <body>
+        
+        <br><br>
+       <img style="margin-left: 20em;" id ="img1" onmouseover="increase()" onmouseout="decrease()" src="images/apex.jpeg" width="250"></img>
+        <br><br>
+        
+    </body>
+</html>

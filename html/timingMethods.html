@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            Timing methids in javascript
+        </title>
+    </head>
+    <script>
+        var seconds =0;
+        var id =0;
+        function printMsg(){
+            document.getElementById("heading2").innerHTML = "5 seconds passed"; 
+        
+        }
+        function printSeconds(){
+            document.getElementById("heading2").innerHTML = seconds + " seconds";
+            seconds+=1;
+        }
+        function start(){
+            id =window.setTimeout(printMsg,5000);
+        }
+        function stop(){
+            window.clearTimeout(id);
+        }
+
+        function startInterval(){
+             id = window.setInterval(printSeconds,1000);
+        }
+        function stopInterval(){
+            window.clearInterval(id);
+        }
+
+        
+    </script>
+    <body>
+        <button onclick="startInterval()" id="btn1">Start</button>
+        <h2 id ="heading2">Some Text</h2>
+        <button id = "btn2" onclick="stopInterval()">Stop</button>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+            email validation in js
+        </title>
+    </head>
+    <script>
+        function validate(){
+            var text = document.getElementById("num1").value;
+            //cannot directly put dot as it is a wildcard purpose string
+            var regex = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$/;
+        if(regex.test(text)){
+            document.getElementById("lb1").innerHTML = "Valid";
+            document.getElementById("lb1").style.visibility = "visible";
+            document.getElementById("lb1").style.color = "green";
+        }else{
+            document.getElementById("lb1").innerHTML ="Invalid";
+            document.getElementById("lb1").style.visibility ="visible";
+            document.getElementById("lb1").style.color ="red";
+        }
+    }
+
+    </script>
+    <body>
+        <form>
+            <input id ="num1" placeholder="enter email id">
+            <label id ="lb1" style="visibility: hidden;color: red;">Invalid</label>
+            <br><br>
+            <button type="button" onclick="validate()">submit</button>
+        </body>
+    </form>
+</html>

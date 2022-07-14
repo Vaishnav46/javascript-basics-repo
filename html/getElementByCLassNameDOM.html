@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Get element by class name in dom JS</title>
+    </head>
+    <script>
+        //document.getElementsByClassName();
+        function chnageClassStyle(){
+            var para = document.getElementsByClassName("para1");
+            for(var i=0;i<para.length;i++){
+            para[i].style.color = "red";
+         //   para[i].style.fontWeight="light";
+            para[i].style.fontFamily = "calibri";
+        }
+        }
+        function revertBack(){
+            var para = document.getElementsByTagName("p");
+            for(var i =0;i<para.length;i++){
+                para[i].style.color="black";
+                para[i].style.fontWeight="bold";
+            }
+        }
+    </script>
+    <body>
+        <p class="para1">this is paragraph1</p>
+        <p>this is paragraph2</p>
+        <p class="para1">this is paragraph3</p>
+        <p>this is paragraph4</p>
+        <p class="para1">this is paragraph5</p>
+        
+        <a class="para1" href="SimplevalidationDOM.html"> Go to the validation page</a>
+        <br><br>
+        <button style=" " id= "btn1" onclick="chnageClassStyle()">click to chnage style using class attribute</button>
+        <br><br>
+        <button onclick="revertBack()">revert all changes and make everything bold</button>
+    </body>
+</html>

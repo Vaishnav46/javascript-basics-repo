@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>
+            RegularExpression in js
+        </title>
+    </head>
+    <script>
+        function validateRegex(){
+        var str =document.getElementById("uname").value;
+       //first simple var regex = /E00/i;
+       //regex= new RegExp("E00","i");
+        //charset eg
+        //var regex = /[sdp]imple/;
+        //charset range
+        //var regex = /[a-d A-X 0-9]imp/;
+        //exclude
+        var regex = /[^1abc]abc/;
+       if(regex.test(str.trim())){
+                alert("correct format given,redirecting to next page");
+                return true;
+            }else{
+            document.getElementById("userlb").style.visibility = "visible";
+            return false;
+        }
+    }
+    </script>
+    <body>
+        <form onsubmit="return validateRegex()">
+            <input id = "uname" placeholder="enter username starting with E00"></input>
+            <label id = "userlb" style="color: red;visibility: hidden;">Invalid</label>
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>
+            onMouseOver and onMouseOut in js
+        </title>
+    </head>
+    <script>
+        function setNewImg(){
+            document.getElementById("apex").src = "images/SiegeRank.jpeg";
+
+        }
+        function setOldImage(){
+            document.getElementById("apex").src = "images/apex.jpeg";
+        }
+    </script>
+    <body>
+        <img id="apex" onmouseover="setNewImg()" onmouseout="setOldImage()" src="images/apex.jpeg" width="550"/>
+        
+    </body>
+</html>

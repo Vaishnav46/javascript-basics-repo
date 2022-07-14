@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>
+            Objects in js
+        </title>
+    </head>
+    <body>
+        <script type = "text/javaScript">
+            // var car = {
+            //     carBrand :"testla",
+            //     carModel :"model3",
+            //     Price : 3500000,
+
+            //     carAutoPilot : function()
+            //     {
+            //         return "<h2>the car has autopilot</h2>";
+            //     }
+            // }
+            // document.write("<h1> car object has " +car.carAutoPilot()+ "</h1>");
+
+            //another way =====> constructor function  ---> this acts as template or blueprint where we can create more objects with this
+            
+            function cars(carBrand , carModel,price) {
+
+                this.carBrand = carBrand;
+                this,carModel = carModel;
+                this.price= price;
+                
+                this.autopilot = function () {
+
+                    if(this.carBrand == "tesla" || this.carBrand == "Tesla" || this.carBrand == "Benz")
+                    {
+                        document.write("<h1>this car has autopilot</h1>");
+                    }else{
+                        document.write("<h1>autopilot yet to come</h1>");
+                    }
+            }
+            }
+
+            var c1 = new cars("Benz","model3",3500000);
+            c1.autopilot();       
+            var p1 = new cars("Tesla","model3",450000);
+            p1.autopilot();     
+        </script>
+    </body>
+</html>

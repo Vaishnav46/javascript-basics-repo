@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>simple addition in js,debugging and devTools</title>
+    </head>
+
+    <script>
+        function add(){
+            var x = document.getElementById("num1").value;
+            var y = document.getElementById("num2").value;
+            
+            var res = x+y;
+
+            console.log(x+y);
+            document.getElementById("result").innerHTML= "Result is "+res;
+        }
+    </script>
+    <body>
+        <input id = "num1" type="number" placeholder="num1">
+        <br><br>
+        <input id="num2" type="number" placeholder="num2">
+
+        <h1 id="result">Result is</h1>
+        <br><br>
+        <button onclick="add()">Add</button>
+    </body>
+</html> 

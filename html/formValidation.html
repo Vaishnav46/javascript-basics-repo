@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>
+            form validation in js
+        </title>
+        <script>
+            function validateFunc(){
+                var uname = document.getElementById("user1");
+                var pass = document.getElementById("pass1");
+                if(uname.value.trim() != "" && pass.value.trim() !=""){
+                    return true;
+                }else{
+                    alert("please fill the credentials!!!")
+                    return false;
+                }
+            }
+                function strictValidation(){
+                    var uname = document.getElementById("user1");
+                    var pass = document.getElementById("pass1");
+                 
+                    if(uname.value.trim() == ""){
+                        alert("please fill the credentials!!!");
+                        uname.style.border="solid 3px red";
+                        return false;
+                    }else if(pass.value.trim() ==""){
+                        alert("please fill the credentials!!!");
+                        pass.style.border= "solid 3px red";
+                        document.getElementById("lbpass").style.visibility ="visible";
+                        return false;
+                    }else if(pass.value.trim().length <5){
+                        alert("password is too short minimum 5 characters")
+                        return false;
+                    }
+                    else
+                        return true;
+                }
+            
+        </script>
+        <body>
+            <form action="messageAfterValidation.html" onsubmit="return strictValidation()">
+                <input id = "user1" placeholder="enter username"></input>
+                <br><br>
+                <input id = "pass1" placeholder="enter password" type="password"></input>
+                <label id = "lbpass" style="color: red;visibility: hidden;">Invalid</label> 
+                <br><br>    
+            <button id ="bt1" type="submit">Submit</button>
+            </form>
+        </body>
+    </head>
+</html>

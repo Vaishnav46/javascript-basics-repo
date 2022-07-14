@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>
+            Simple validation HW in js
+        </title>
+        <script>
+            function fn1(){
+                var str1 = document.getElementById("text1").value;
+                var str2 = document.getElementById("text2").value;
+               //alert("inside validate fn");
+              // var str3 = new String(document.getElementById("text1").value);
+               //var str4 = new String(document.getElementById("text2").value);
+                if(str1 == str2){
+                    alert("both value matches");
+                }else{
+                    alert("sorry...validation failed");
+                }
+
+            }
+        </script>
+        <body>
+            <input id = "text1" placeholder="enter the username"/>
+            <br><br>
+            <input type = "password" id = "text2" placeholder="enter the password"/>
+            <br><br>
+            <button onclick="fn1()">Submit for validation</button>
+        </body>
+    </head>
+</html>

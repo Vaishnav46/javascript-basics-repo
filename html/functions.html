@@ -1,0 +1,34 @@
+
+<html>
+    <head>
+        <title>Functions in js</title>
+    </head>
+    <body>
+        <script type = "text/javascript">
+            /**
+             * functions is a block of code---suite 
+             * that executes some functionality that we desire - eg: adding 2 nos
+             * */
+
+             
+
+             
+             function addTwoNums(x,y){
+                 var res = x+y;
+                 document.write("<h1>the result is "+res+"</h1>");
+                }
+
+            function addTwoNumsAndReturn(x,y){
+                var res = x+y+5;
+
+                return res;
+            }
+                
+            var a = 21;
+            var b = 56;
+            addTwoNums(a,b);
+            var total = addTwoNumsAndReturn(a,b);
+            document.write("<h1>"+total+"</h1>");
+        </script>
+    </body>
+</html>
