@@ -17,7 +17,10 @@
         </div>
         
         <div class="mydivs1">  
-            
+            <input id="inp1" placeholder="enter the font you need"></input>
+            <button id ="submit">submit font</button>
+            <button id ="getFont">get font</button>
+            <button id ="setFont">set font</button>
             <button id ="btn1">action</button>
         </div>
     </body>
@@ -35,7 +38,18 @@
 
            $("#seconddiv").attr("class","mydivs1");
         })
+
+        $("#getFont").click(function(){
+            alert($(".mydivs").css("font-family"));
+        })
        
+
+        $("#submit").click(function(){
+            var fnt = document.getElementById("inp1").value;
+            alert(fnt);
+            $(".mydivs").css("font-family",fnt);
+        })
+//font-family: Arial, Helvetica, sans-serif;
         });
 
 
