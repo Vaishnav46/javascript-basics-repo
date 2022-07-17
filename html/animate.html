@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>
+          Effects in jquery -Animate Effects
+        </title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h2 class="hd" id = "firsth2">Events in jQuery</h2>
+        <p>this is a para outside div</p>
+        <button id="btn2">click me 1</button>
+        <button id="btn3">click me 2</button>
+        <button id ="btnabi">Animate</button>
+        <div id="firstdiv" class="mydivs">    
+            <p>This is 1st para in 1st div</p>
+            <p>This is 2nd para in 1st div</p>
+        </div>
+        <div id="seconddiv" class="mydivs">    
+            <p>This is 3rd para in 2nd div</p>
+        </div>
+        <div id="thirddiv" class="mydivs">    
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+                <li>List item 4</li>
+            </ul>
+        </div>
+        <div>    
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+                <li>List item 4</li>
+            </ul>
+        </div>
+
+        <div id="cubediv">
+            <p>CUBE</p>
+        </div>
+    </body>
+    <script src="js/jquery.js"></script>
+    <script>
+       $(document).ready(function(){
+
+        $("#btnabi").click(function(){
+            $("#cubediv").animate({
+                left:'150px',
+                opacity:'1',
+                height:'100px',
+                width:'100px',
+            },'fast');
+
+
+        });
+       });
+    </script>
+</html>

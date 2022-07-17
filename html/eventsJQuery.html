@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>
+          Events in jquery
+        </title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h2 class="hd" id = "firsth2">Events in jQuery</h2>
+      <p>this is a para outside div</p>
+  <button id="btn2">click me 1</button>
+  <!-- <button id="btn3">click me 2</button> -->
+        <div id="firstdiv" class="mydivs">    
+            <p>This is 1st para in 1st div</p>
+            <p>This is 2nd para in 1st div</p>
+        </div>
+        <div id="seconddiv" class="mydivs">    
+            <p>This is 3rd para in 2nd div</p>
+        </div>
+        <div id="thirddiv" class="mydivs">    
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+                <li>List item 4</li>
+            </ul>
+        </div>
+        <div>    
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+                <li>List item 4</li>
+            </ul>
+        </div>
+       
+        <button id="btn1">click me</button>
+    </body>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $("#btn2").hover(fn1,fn2);
+            $("#btn1").click(fn3);
+            function fn1(){
+                //$("p").fadeToggle();
+                $("div").fadeOut(); 
+            }
+            function fn2(){
+                //$("p").fadeToggle();
+                $("div").fadeIn(); 
+            }
+            function fn3(){
+                $("li:even").fadeToggle();
+            }
+        });
+    </script>
+</html>
