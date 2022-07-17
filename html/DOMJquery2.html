@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>
+         dom manipulations in jquery -part 2
+        </title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h2 class="hd" id = "firsth2">DOM manipulations in jQuery</h2>
+        
+        <div id="firstdiv" class="mydivs">    
+            <p id = "para1">This is <b>1st</b> para in 1st div</p>
+            <p id ="para2">This is <b>2nd</b> para in 1st div</p>
+        </div>
+        <div id="seconddiv" class="mydivs">    
+            <p>This is <b>3rd</b> para in 2nd div</p>
+        </div>
+        
+        <div class="mydivs1">  
+            
+            <button id ="btn1">action</button>
+        </div>
+    </body>
+    <script src="js/jquery.js"></script>
+    <script>
+       $(document).ready(function(){
+
+        $("#btn1").click(function(){
+           
+           var txt = $("#para1").text() +" hello world";
+           
+           $("#para1").text("hello world"); 
+            //alert( txt);
+            $("#para2").text("This is vaishnav"); 
+
+           $("#seconddiv").attr("class","mydivs1");
+        })
+       
+        });
+
+
+       
+    </script>
+</html>

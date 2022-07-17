@@ -1,13 +1,15 @@
 .mydivs{
-    border: 2px solid blue;
+    border: 10px solid blue;
     margin: 5px;
     padding: 10px;
+    border-radius: 5px;
+    border-style: outset;
 }
 #firsth2{
     color: blue;
 }
 div p{
-    color: red;
+    color: darkcyan;
 }
 #cubediv{
     width: 50px;
@@ -16,4 +18,21 @@ div p{
     padding: 10px;
     opacity: 0.4;
     position: absolute;
+}
+#mydiv2{
+    border: 5px solid red;
+    border-radius: 5px;
+    border-style: inset;
+    border-width: 20px;
+    position: absolute;
+}
+#para1{
+    color: black;
+}
+.mydivs1{
+    border: 30px solid red;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border-style: outset;
 }

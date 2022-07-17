@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>
+          Effects in jquery -Animate Effects
+        </title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h2 class="hd" id = "firsth2">Events in jQuery</h2>
+        <p>this is a para outside div</p>
+        
+        <button id ="btn1">animate</button>
+        <button id ="btn2">animateback</button>
+        <button id ="btn3">chaining</button>
+        <div id="firstdiv" class="mydivs">    
+            <p>This is 1st para in 1st div</p>
+            <p>This is 2nd para in 1st div</p>
+        </div>
+        <div id="seconddiv" class="mydivs">    
+            <p>This is 3rd para in 2nd div</p>
+        </div>
+        <div id="mydiv2">
+            <h1>Hello world</h1>
+            <h1>Hello world 2</h1>
+        </div>
+    </body>
+    <script src="js/jquery.js"></script>
+    <script>
+       $(document).ready(function(){
+
+        $("#btn1").click(function(){
+            $("#mydiv2").animate({
+                left:'500px',
+                opacity:'1',
+                height:'400px',
+                width:'400px',
+                
+            },5000,fn2)
+        
+        });
+       function fn2(){
+
+            $("#mydiv2").animate({
+                
+                opacity:'0.5',
+                height:'200px',
+                width:'200px',
+            
+            },5000,fn3)
+        }  
+            
+        function fn3(){
+                $("#mydiv2").slideToggle(2000,function(){
+                    alert("slide toggle done");
+                });
+            }
+        
+        $("#btn3").click(function(){
+            $("#mydiv2").slideUp(2000).slideDown(2000).fadeOut().fadeIn();
+        })
+        });
+
+
+       
+    </script>
+</html>
