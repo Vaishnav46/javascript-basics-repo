@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>
+         dom manipulations in jquery -part 3
+        </title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h2 class="hd" id = "firsth2">DOM manipulations in jQuery part 3</h2>
+        
+        <div class="mydivs1">  
+            <button id = "btn1">Append</button>
+            <button id ="btn2">After</button>
+            <button id ="btn3">Prepend</button>
+            <button id ="btn4">Before</button>
+            <button id ="btn5">Remove</button>
+            <button id="btn6">Empty</button>
+        </div>
+        <div id="firstdiv" class="mydivs">    
+            <p id = "para1">This is <b>1st</b> para in 1st div</p>
+            <p id ="para2">This is <b>2nd</b> para in 1st div</p>
+        </div>
+
+        
+    </body>
+    <script src="js/jquery.js"></script>
+    <script>
+       $(document).ready(function(){
+
+        $("#btn1").click(function(){
+
+            $("#firstdiv").append("<p>This is a paragraph that is passed<p>");
+        })
+
+        
+        $("#btn2").click(function(){
+
+$("#firstdiv").after("<p>This is a paragraph that is passed<p>");
+})
+$("#btn3").click(function(){
+
+$("#firstdiv").prepend("<p>This is a paragraph that is passed<p>");
+})
+
+$("#btn4").click(function(){
+
+$("#firstdiv").before("<p>This is a paragraph that is passed<p>");
+})
+
+$("#btn5").click(function(){
+    
+    $("p").remove("#para2");
+    })
+
+    $("#btn6").click(function(){
+
+$("#firstdiv").empty();
+})
+    
+});
+
+        
+
+
+       
+    </script>
+</html>

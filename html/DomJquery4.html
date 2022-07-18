@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>
+         dom manipulations in jquery -part 3
+        </title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h2 class="hd" id = "firsth2">DOM manipulations in jQuery part 3</h2>
+        
+        <div class="mydivs1">  
+            <button id ="btn1">Add class</button>
+            <button id ="btn2">Remove class</button>
+            <button id ="btn3">Toggle class</button>
+            <button id="btn4">CSS</button>
+            <button id ="btn5">Animate</button>
+        </div>
+        <div id="firstdiv" class="mydivs">    
+            <p id = "para1">This is <b>1st</b> para in 1st div</p>
+            <p id ="para2">This is <b>2nd</b> para in 1st div</p>
+        </div>
+
+        
+    </body>
+    <script src="js/jquery.js"></script>
+    <script>
+       $(document).ready(function(){
+
+        $("#btn1").click(function(){
+            $("#firstdiv").addClass("newdivs mydivs");
+        });
+
+        
+        $("#btn2").click(function(){
+            $("#firstdiv").removeClass("newdivs");
+
+        });
+
+        $("#btn3").click(function(){
+            $("#firstdiv").toggleClass("newdivs");
+
+        });
+        $("#btn5").click(function(){
+            $(".mydivs").animate({
+                margin:'250px 200px'
+
+            })
+
+        });
+    
+    });
+
+        
+
+
+       
+    </script>
+</html>

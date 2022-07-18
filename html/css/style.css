@@ -36,3 +36,9 @@ div p{
     border-radius: 5px;
     border-style: outset;
 }
+
+.newdivs{
+    border-radius: 10px;
+    background-color: aqua;
+    border-style: outset;
+}
