@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>
+            Message box in Jquery UI
+        </title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.theme.css">
+    </head>
+    <body>
+        <div id="mydiv">
+            <h3>Hello welcome to my learning portal</h3>
+            <button id="btn1">click to show message box</button>
+        </div>
+        <div id="messageBox">
+            <h3>This is just a dummy title</h3>
+            <img src="images/SiegeRank.jpeg" width="200px">
+            <br><br>
+            <button id="btn2">Click me</button>
+        </div>
+    </body>
+    <script src="js/jquery.js"></script>
+    <script src="jqueryUI/jquery-ui.js"></script>
+    <script>
+        $("#btn1").click(function(){
+
+            $("#messageBox").css("visibility","visible").dialog({
+                title:"custom message box",
+                draggable:true,
+                height:300,
+                width:300,
+                modal:true,
+
+                buttons: [{
+                    text:"Close",
+                    icon:"ui-icon-heart",
+                    click: function(){
+                        $(this).dialog("close");
+                    }
+                },
+                    {
+                    text:"Ok",
+                    icon:"ui-icon-heart",
+                    click: function(){
+                        $(this).dialog("close");
+                    }
+                }]
+
+            });
+        })
+    </script>
+</html>

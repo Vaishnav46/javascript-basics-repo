@@ -30,10 +30,10 @@ div p{
     color: black;
 }
 .mydivs1{
-    border: 30px solid red;
+    border: 10px solid rebeccapurple;
     margin: 5px;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 20px;
     border-style: outset;
 }
 
@@ -41,4 +41,17 @@ div p{
     border-radius: 10px;
     background-color: aqua;
     border-style: outset;
+}
+
+#mydiv{
+    border: 10px solid rebeccapurple;
+    border-radius: 20px;
+    border-style: inset;
+    padding: 10px;
+
+}
+#messageBox{
+    border: 5px solid rebeccapurple;
+    border-radius: 10px;
+    visibility: hidden;
 }

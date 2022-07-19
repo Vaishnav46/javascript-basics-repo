@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>
+            Introduction to Jquery UI in js
+        </title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.theme.css">
+    </head>
+
+    <body>
+        <div id="mydiv">
+            <h1>Introduction to Jquery UI</h1>
+
+            <input id="dateInput" type="text" placeholder="select the date"></input>
+            <button id="dob">submit</button>
+        </div>
+    </body>
+    <script src="js/jquery.js"></script>
+    <script src="jqueryUI/jquery-ui.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+            $("#dateInput").datepicker({
+                numberOfMonths:1,
+                changeYear:true,
+                changeMonth:true,
+                showWeek:true,
+                weekHeader:"week number",
+                showOtherMonths:true,
+                minDate:new Date(2020,11,30),
+                maxDate:new Date(2024,0,1)
+            });
+            
+            // $("#dob").click(function(){
+                
+            //     var date =$("#dateInput").text();
+                
+            //     if(date == "10/02/2022"){
+            //         alert("your bday!!!!");
+            //     }else{
+            //         continue;
+            //     }
+                
+            // })
+        });
+            
+        
+
+    </script>
+</html>

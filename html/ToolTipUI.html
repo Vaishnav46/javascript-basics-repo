@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            Introduction to Jquery UI in js
+        </title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.theme.css">
+    </head>
+
+    <body>
+        <div id="mydiv">
+            <h1> ToolTip in Jquery UI</h1>
+
+            <img src="images/apex.jpeg" width="500px" title="Apex" id="img1">
+            
+        </div>
+    </body>
+    <script src="js/jquery.js"></script>
+    <script src="jqueryUI/jquery-ui.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+            $("#img1").tooltip(
+                {
+                    content:"Apex Legends -- This game is a first person shooter game,which gives an immersive gaming experience with high intensity bouts with real time opponents and not AIs",
+                    show:{effect:"bounce",duration:1000},
+                    hide:{effect:"explode",duration:1000}                
+                }
+            );
+
+        });
+            
+        
+
+    </script>
+</html>
