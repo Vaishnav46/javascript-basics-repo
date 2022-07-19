@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Autocomplete using JQuery UI</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.theme.css">
+    </head>
+    <body>
+
+        <button id="btn1">animate</button>
+        <div id="mydiv" style="visibility: hidden;">
+            <h3>Autocomplete widget in JQuery UI</h3>
+            <label id="lb1">Enter you favorite city</label>
+            <input type="text" id="cityBox"></input>
+        </div>
+        <br><br>
+       
+    </body>
+    <script src="js/jquery.js"></script>
+    <script src="jqueryUI/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#mydiv").css("visibility","visible").slideUp(1).slideToggle();
+            })
+            var mycities = ["Mumbai","New Delhi","Chennai","Banglore","Kolkata","Pune","Hyderabad","Chicago"];
+            $("#cityBox").autocomplete({
+                source:mycities
+            },{
+                autofocus:true,
+                delay:0,
+                minLength:2
+            });
+        });
+    </script>
+</html>
