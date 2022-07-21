@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>
+            Interaction -Draggable in js
+        </title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h1>Draggable Feature in jquery-ui</h1>
+        <div>
+            <div id = "cube1" class="cubediv">
+                <h3>DRAG CUBE 1</h3>
+            </div>
+            <div id = "cube2" class="cubediv">
+                <h3>DRAG CUBE 1</h3>
+            </div>
+        </div>
+    </body>
+    <script src="js/jquery.js"></script>
+    <script src="jqueryUI/jquery-ui.js"></script>
+    <script>
+
+        $(".cubediv").draggable({
+            axis:"x,y",
+            containment:"document",
+            cursor:"grabbing",
+            opacity:0.5
+
+        });
+    </script>
+
+
+</html>

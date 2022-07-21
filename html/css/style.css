@@ -63,3 +63,23 @@ div p{
     font-style: initial;
     color: rebeccapurple;
 }
+
+.cubediv{
+     padding: 10px;
+     
+
+}
+#cube1{
+    height: 150px;
+    width: 150px;
+    background-color: red;
+    padding-top: 1em;
+    
+}
+
+#cube2{
+height: 150px;
+width: 150px;
+background-color: aquamarine;
+padding-top: 1em;
+}

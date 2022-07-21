@@ -22,6 +22,8 @@
             <p>JavaScript is a scripting language which mainly focuses web devolpment and gives logic to the dom ,similar to python this is also a dynamically typed so it will bge handly to use them in coding interviews</p>
             
         </div>
+
+        <button id ="btn1">modify accordion</button>
     </body>
     <script src="js/jquery.js"></script>
     <script src="jqueryUI/jquery-ui.js"></script>
@@ -38,8 +40,13 @@
             heightStyle:true,
             icons:{header:"ui-icon-plus",activeHeader:"ui-icon-minus"}
 
+       
         });
 
+        $("#btn1").click(function(){
+
+            $("#panels").accordion("option","active",1);
+        })
         });
 
     </script>
