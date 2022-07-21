@@ -65,17 +65,15 @@ div p{
 }
 
 .cubediv{
-     padding: 10px;
-     
+     height: 150px;
+     width: 150px;
+     background-color: red;
+     margin: 50px;
+     display: inline-flex;
 
 }
-#cube1{
-    height: 150px;
-    width: 150px;
-    background-color: red;
-    padding-top: 1em;
     
-}
+
 
 #cube2{
 height: 150px;
