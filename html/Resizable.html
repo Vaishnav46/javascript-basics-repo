@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+            Interaction -Sortable in js
+        </title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jqueryUI/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h1>Sortable Feature in jquery-ui</h1>
+        <div id="mydivs">
+            <img id ="img1" src="images/apex.jpeg" width="600px">
+        </div>
+    </body>
+    <script src="js/jquery.js"></script>
+    <script src="jqueryUI/jquery-ui.js"></script>
+    <script>
+
+        $("#img1").resizable({
+            maxHeight:1000,
+            maxWidth:1000,
+            autoHide:true,
+            ghost:true,
+            aspectRatio:true
+        });
+
+    </script>
+
+
+</html>
